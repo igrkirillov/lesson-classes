@@ -13,15 +13,12 @@ describe('character module', () => {
     const name = 'AB';
     const type = 'Bowerman';
     const health = 100;
-    const level = 2;
-    const attack = 30;
-    const defence = 55;
-    const ch = new Character(name, type, health, level, attack, defence);
-    expect(ch.name).toBe(name);
-    expect(ch.type).toBe(type);
-    expect(ch.health).toBe(health);
-    expect(ch.level).toBe(level);
-    expect(ch.attack).toBe(attack);
-    expect(ch.defence).toBe(defence);
+    const level = 1;
+    const attack = undefined;
+    const defence = undefined;
+    const ch = new Character(name, type);
+    expect(ch).toEqual({
+      name, type, health, level, attack, defence
+    })
   })
 })
