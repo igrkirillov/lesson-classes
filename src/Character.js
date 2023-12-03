@@ -1,4 +1,4 @@
-class Character {
+export default class Character {
   constructor(name, type, health, level, attack, defence) {
     this.checkName(name);
     this.name = name;
@@ -21,7 +21,7 @@ class Character {
   }
 
   checkType(type) {
-    const availableTypes = ["Bowman", "Swordsman", "Magician", "Daemon", "Undead", "Zombie"];
+    const availableTypes = ["Bowerman", "Swordsman", "Magician", "Daemon", "Undead", "Zombie"];
     if (!availableTypes.includes(type)) {
       throw new Error(`Значение параметра type ${type} не содержится среди доступных ${availableTypes}`);
     }
